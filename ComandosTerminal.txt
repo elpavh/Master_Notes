@@ -5,8 +5,10 @@ Inicio de Curso Manejo de la Terminal @Platzi
 
 
 # Las razones para aprender a usarla son:
-    #1. Tenemos mucha **flexibilidad** ya que podemos hacer procesos dentro de nuestra computadora de una forma más eficiente, mover grandes volúmenes de datos de forma rápida, así como hacer copias e incluso programar procesos que se ejecuten en cierto tiempo
-    #2. Normalmente hacer cosas en la terminal como copiar archivos o buscarlos tiende a ser mucho más rápido que hacerlo a través de una interfaz gráfica. Por lo tanto podemos decir que tenemos una **velocidad** mayor al realizar dichos procesos en la terminal.
+    #1. Tenemos mucha **flexibilidad** ya que podemos hacer procesos dentro de nuestra computadora de una forma más eficiente, mover grandes 
+        # volúmenes de datos de forma rápida, así como hacer copias e incluso programar procesos que se ejecuten en cierto tiempo
+    #2. Normalmente hacer cosas en la terminal como copiar archivos o buscarlos tiende a ser mucho más rápido que hacerlo a través de una interfaz
+        # gráfica. Por lo tanto podemos decir que tenemos una **velocidad** mayor al realizar dichos procesos en la terminal.
     #3. **No siempre contaremos con una interfaz gráfica** o puede llegar a fallar.
 
 
@@ -15,4 +17,50 @@ Inicio de Curso Manejo de la Terminal @Platzi
     # Korn Shell # Fish Shell # Power Shell
 
 
+# El sistema de archivos, será el árbol por el que nos estaremos moviendo en la terminal.
+        # Representacion del sistema de archivos.
+                           | / |
+                             V      
+                 |-----|-----|-------|------|
+              | etc | dev  | home  | usr  | var  |   
+                               V       V
+               v-------V-------V       V  
+             | jono | mako | cory |  | lib |
+                V
+                V-------V
+            | work | photos |
+
+    # En la carpeta home es donde se encuentran los usuarios del sistema operativo. Dentro de la terminal identificamos esta carpeta con el símbolo llamado virgulilla ~.
+
+
+$ Comando                     #Accion
+
+$ ls                          # Lista los archivos y carpetas del directorio.
+$ ls -l                       # Lista los archivos y carpetas con toda la información de cada uno.
+$ ls -lh                      # Lista los archivos y carpetas con la información legible para humanos.
+$ ls -la                      # Lista los incluyendo los que estan ocultos.
+$ ls -lS                      # Lista los elementos del mas pesado al mas liviano.
+$ ls -llegar                  # Lista los elementos del mas liviano al mas pesado.
+
+$ cd <directorio>             # Para cambiar entre directorios, '$cd' solo te lleva al home, '$cd ..' te lleva una carpeta atras.
+
+$ pwd                         # Imprime la ruta del directorio en el que estas.
+
+$ file <file_name>            # Describe el tipo de archivo que recibe como parametro.
+
+$ tree -L <2>                 # Despliega los elementos que se encuentren en el nivel indicado (2).
+
+$ mkdir <new_folder>          # Crea un nuevo directorio con el nombre indicado.
+
+$ touch <new_file>            # Crea un archivo con el nombre indicado.
+
+$ cp <original> <name_copia>  # Crea una copia del archivo con el nombre que reciba.
+
+$ mv <file> <path>            # Mueve el archivo a la ubicación deseada.
+$ mv <file> <newname_file>    # Renombra el archivo o directorio.
+
+$ rm <file>                   # Elimina el archivo indicado.
+$ rm -i <file>                # Pide confirmacion en cada archivo a eliminar.
+$ rm -r <directorio>          # Elimina el directorio indicado.
+$ rm -rf <directorio>         # Recursive (r), force (f), elimina todo incluso tu windows.<
 
