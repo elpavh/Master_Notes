@@ -21,10 +21,10 @@ Inicio de Curso Manejo de la Terminal @Platzi
         # Representacion del sistema de archivos.
                            | / |
                              V      
-                 |-----|-----|-------|------|
+                 V-----V-----V--------V-----V
               | etc | dev  | home  | usr  | var  |   
                                V       V
-               v-------V-------V       V  
+               V-------V-------V       V  
              | jono | mako | cory |  | lib |
                 V
                 V-------V
@@ -33,7 +33,14 @@ Inicio de Curso Manejo de la Terminal @Platzi
     # En la carpeta home es donde se encuentran los usuarios del sistema operativo. Dentro de la terminal identificamos esta carpeta con el símbolo llamado virgulilla ~.
 
 
-$ Comando                     #Accion
+# ¿Que es un comando ?
+    # 1. Un programa ejecutable.
+    # 2. Un comando de utilidad de la shell.
+    # 3. Una funcion de shell.
+    # 4. Un  alias.
+
+
+$ Comando                     #Accion                   ##Comandos Basicos
 
 $ ls                          # Lista los archivos y carpetas del directorio.
 $ ls -l                       # Lista los archivos y carpetas con toda la información de cada uno.
@@ -41,6 +48,7 @@ $ ls -lh                      # Lista los archivos y carpetas con la informació
 $ ls -la                      # Lista los incluyendo los que estan ocultos.
 $ ls -lS                      # Lista los elementos del mas pesado al mas liviano.
 $ ls -llegar                  # Lista los elementos del mas liviano al mas pesado.
+$ ls -d                       # Lista unicamente los directorios/carpetas.
 
 $ cd <directorio>             # Para cambiar entre directorios, '$cd' solo te lleva al home, '$cd ..' te lleva una carpeta atras.
 
@@ -62,5 +70,52 @@ $ mv <file> <newname_file>    # Renombra el archivo o directorio.
 $ rm <file>                   # Elimina el archivo indicado.
 $ rm -i <file>                # Pide confirmacion en cada archivo a eliminar.
 $ rm -r <directorio>          # Elimina el directorio indicado.
-$ rm -rf <directorio>         # Recursive (r), force (f), elimina todo incluso tu windows.<
+$ rm -rf <directorio>         # Recursive (r), force (f), elimina todo incluso tu windows.
+
+$ head <file>                 # Muestra las primeras 10 líneas de un archivo de texto.
+$ head <file> -n 15           # Muestra las primeras lineas que recibe en este caso 15.
+
+$ tail <file>                 # Muestra las ultimas 10 lineas de un archivo de texto.
+$ tail <file> -n 15           # Muestra las primeras lineas seleccionadas (15).
+
+$ less <file>                 # Muestra todo el archivo de texto, con '/' se puede buscar alguna palabra.
+
+$ nautilus <directorio>       # Abre el sistema de archivos (Linux).
+
+$ type <comando>              # Es un comando que nos permite analizar la naturaleza de otros comandos.
+
+$ alias <l="ls -lh">          # Crea un alias temporal, solo dura durante la sesion.
+
+$ help <comando>              # Muestra informacion sobre como usar un comando en BASH.
+$ man <comando>               # Muestra el maual del comando indicado.
+$ info <comando>              # Muestra el manual del comando indicado.
+$ whatis <comando>            # Muestra una descripcion corta del comando indicado.
+
+
+# ¿ Que son los Wildcards?
+    # Los wildcards son una serie de patrones o caracteres especiales que nos permiten realizar busquedas avanzadas.
+
+# Wildcard       $ Ejemplos                      # Accion
+
+# *              $ ls *.txt                      # En este caso filtra todos los archivos que terminen en .txt .
+# *              $ ls datos*                     # En este caso muestra los archivos que empiecen con 'datos'.
+
+# ?              $ ls datos?.txt                 # Filtrar archivos que contengan solo un carácter después de la palabra especificada.  (Ejemplo resultado datos1.txt)
+# ?              $ ls datos??.txt                # Filtrar archivos que contengan solo 2 carácter después de la palabra especificada. (Ejemplo resultado datos12.txt)
+
+# []              $ ls [a]*                      # Muestra todos los archivos que comiencen con 'a'.
+# []              $ ls [aP]*                     # Muestra todos los archivos que comiencen con 'a' o 'P'.
+
+# [!]              $ ls [!aP]*                   # Muestra todos los archivos que NO comiencen con 'a' o 'P'.
+
+# [[:upper:]]     $ ls [[:upper:]]*              # Filtra los archivos que empiecen con mayusculas, [[:upper:]] solo representa un caracter en mayuscula.
+
+# [[:lower:]]     $ ls [[:lower:]]*              # Filtra los archivos que empiecen con minuscula, [[:upper:]] solo representa un caracter en minuscula.
+
+# [[:digit:]]     $ ls [[:digit:]]*              # Filtra los archivos que empiecen con un numero.
+
+# [[:alpha:]]     $ ls [[:alpha:]]*              # Filtra los archivos que empiecen con una letra.
+
+# [[:alnum:]]     $ ls [[:alnum:]]*              # Filtra los archivos que tengan con una letra o numero (alfanumerico).
+
 
