@@ -78,6 +78,8 @@ $ head <file> -n 15           # Muestra las primeras lineas que recibe en este c
 $ tail <file>                 # Muestra las ultimas 10 lineas de un archivo de texto.
 $ tail <file> -n 15           # Muestra las primeras lineas seleccionadas (15).
 
+$ cat <file1> <file2>         # Concatena la salida de 2 archivos, de igual manera puede ser usarse solo con 1.
+
 $ less <file>                 # Muestra todo el archivo de texto, con '/' se puede buscar alguna palabra.
 
 $ nautilus <directorio>       # Abre el sistema de archivos (Linux).
@@ -91,6 +93,8 @@ $ man <comando>               # Muestra el maual del comando indicado.
 $ info <comando>              # Muestra el manual del comando indicado.
 $ whatis <comando>            # Muestra una descripcion corta del comando indicado.
 
+$ date                        # Muestra la hora que es.
+$ cal                         # Muestra el calendario en la terminal.
 
 # ¿ Que son los Wildcards?
     # Los wildcards son una serie de patrones o caracteres especiales que nos permiten realizar busquedas avanzadas.
@@ -119,3 +123,85 @@ $ whatis <comando>            # Muestra una descripcion corta del comando indica
 # [[:alnum:]]     $ ls [[:alnum:]]*              # Filtra los archivos que tengan con una letra o numero (alfanumerico).
 
 
+#Redirecciones (STDIN, STDOUT y STDERR)
+
+                                  --> STDOUT (1)
+        STDIN(0) --> COMANDO  -->
+                                  --> STDERR (2)
+
+    # En el diagrama tenemos una entrada que se le conoce como standard input (stdin) que proviene de nuestro teclado; pero que también lo podemos 
+        # redirigir desde archivos de texto, el output (stdout) es la el resultado correcto del stdin, el stderr entra en accion en caso de error
+
+# Ejemplo                             # Accion
+
+$ ls Documents > ejemplo.txt          #  Con '>' redirigmos el stdout del comando 'ls' a un archivo.txt, si este ya existe lo SOBREESCRIBE.
+$ ls Documents >> ejemplo.txt         # la diferencia entre '>' y '>>' es que con '>>' concatenamos la salida en el archivo en lugar de SOBREESCRIBIR.
+
+$ ls Aasdads 2> error.txt             # Con '2>' redirigmos el STDERR al archivo .txt.
+$ ls Aasdads 2>> error.txt            # Con '2>>' redirigmos y concatenamos el STDERR al archivo .txt.
+
+$ ls Documents >> ejemplo.txt 2>&1    # Con '2>&1' nos sirve para que el output se rediriga y concatene por el '>>' con o sin error.  
+
+$ cat < peanuts.txt > banana.txt      # Con '<' redirigmos el STDIN, normalmente en el comando cat le enviamos un archivo y ese archivo se convierte en el STDIN,
+                                        # en este caso nosotros redirigmos Peanuts.txt para ser el STDIN. Despues el output de 'cat peanuts.txt' va a ser redirigido al archivo banana.txt.
+
+#Redirecciones: Pipe operators 
+
+#Simbolo   $ Ejemplo                                # Accion
+
+# |        $ ls -la | less                          # Redirige el STDOUT de 'ls -la' y lo convierte en el STDIN de 'less'.
+
+# | tee    $ ls -lh | less | tee output3.txt        # '| tee' Te permite redirigir el STDOUT en 2 flujos diferentes, en este caso el STDOUT de 'ls -la | less' lo muestra 
+                                                        # en la terminal y a su vez genera el archivo 'output3.txt' con el STDOUT.   
+
+# | tee    $ ls | tee peanuts.txt banan.txt         # redirige el STDOUT de 'ls' hacia los archivos 'peanuts.txt' y 'banan.txt' y a su ves muestra en la terminal el 'ls'.
+
+# sort     $ ls -lh | sort | tee output4.txt        # con el filtro 'sort' organizamos alfabaticamente una salida.
+
+
+# Operadores de control
+
+# Simbolo   $ Ejemplo                                # Accion
+
+# ;        $ ls; mkdir carpeta1, cal                # Con ';'Se ejecutan los comandos de manera sincrona, primero 'ls', despues 'mkdir' y al final 'cal'.
+
+# &        $ ls & date & cal                        # Por cada comando que yo ejecute se va abrir una shell en segundo plano (va usar un hilo de mi procesador por cada comando que este ejecutando)
+
+# &&       $ mkdir test && cd test                  # (AND) Solo si el comando 'mkdir test' termina correcto ejecuta el segundo comando 'cd test'.
+
+# ||       $ cd asdf || echo"Yes"                   # (OR) Va ejecutar los 2 comandos a pesar de que 'cd asdf' va a mandar error.
+
+$ (cd asd || touch pruebas.txt) && echo "Correcto"  # Si cual quiera de los dos comandos 'cd asd' o 'touch pruebas.txt' es correcto, va ejecutar el echo 'correcto'.
+
+
+# Tipos de archivo (Vienen al principio cuando usas el comando 'ls -l')
+
+# Simbolo           # Tipo de archivo
+
+# -                 # Un archivo normal.
+
+# d                 # Un directorio.
+
+# l                 # Un link simbolico.
+
+# b                 # Un archivo de bloque especial. Manejan informacion de los bloqueos de datos como una USB.
+
+
+# Manejo de permisos y usuarios 
+
+    # existen 3 tipos de permisos R (read), W (write), y X (execute)
+
+# Tabla de permisos
+
+    |   Dueño   |    Grupo    |    World    |
+    | r   w   X |   r   -   x |   r   -   x
+    | 1 | 1 | 1 |-| 1 | 0 | 1 |-| 1 | 0 | 1 |
+          7             5             5             # Modo octal.
+
+# Modo simbolico
+
+    | Simbolo  |   Significado          |
+    |    u     | Solo para el usuario   |
+    |    g     | Solo para el grupo     |
+    |    o     | Solo para otros (world)|
+    |    a     | Aplica para todos      |
