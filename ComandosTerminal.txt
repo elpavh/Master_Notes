@@ -182,10 +182,9 @@ $ (cd asd || touch pruebas.txt) && echo "Correcto"  # Si cual quiera de los dos 
 
 # d                 # Un directorio.
 
-# l                 # Un link simbolico.
+# l                 # Un link simbolico. Son un tipo de archivo que hace referencia a algun lugar
 
 # b                 # Un archivo de bloque especial. Manejan informacion de los bloqueos de datos como una USB.
-
 
 # Manejo de permisos y usuarios 
 
@@ -198,10 +197,65 @@ $ (cd asd || touch pruebas.txt) && echo "Correcto"  # Si cual quiera de los dos 
     | 1 | 1 | 1 |-| 1 | 0 | 1 |-| 1 | 0 | 1 |
           7             5             5             # Modo octal.
 
-# Modo simbolico
+# Modo simbolico            
 
     | Simbolo  |   Significado          |
     |    u     | Solo para el usuario   |
     |    g     | Solo para el grupo     |
     |    o     | Solo para otros (world)|
     |    a     | Aplica para todos      |
+
+$ Comando                       # Accion      ## Comandos para cambiar permisos
+
+$ chmod 755 mitexto.txt         # Asigna permisos 7(rwx) para dueño, 5 (r-x) para Grupo y World.
+
+$ chmod g+w mitexto.txt         # Asigna permisos de escritura (write) al grupo (g) del archivo mitexto.txt.
+
+$ chmod o-x mitexto.txt         # Quita permisos de ejecucion (x) a World (o) del archivo mitexto.txt.
+
+$ chmod g-rx,o-rx mitexto.txt   # Quita permiso de ejecucion(x) y lectura(r) a Grupo (u) y World (o).
+
+$ sudo su                       # Entramos en el modo root.
+
+$ sudo passwd root              # Asignamos password al usuario root.
+
+$ su <usuario>                  # Cambiamos de usuario. SU (Switch User).
+
+$ chown <nuevousuario> <file>   # Chown(change owner) cambia el usuario dueño de algun archivo.
+
+$ whoami                        # Nos dice el usuario en el que estamos.
+
+$ ln -s <ruta> <nombrelink>     # Creamos un link simbolico el cual es como un acceso directo desde terminal.   ln -s /mnt/c/Users/pablo.valenzuela homewindows
+
+
+# ¿Que son las variables de entorno?
+    
+    # La shell tiene una configuracion con diferentes valores que se pueden acceder atraves de las variables de entorno.
+
+    # Para modificar las variables de entorno abrimos el archivo .bashrc, en caso de ser zsh seria .zshrc.
+
+    # Dentro del archivo .bashrc para agregar un path seria  'PATH=$PATH:home/elpvh/bin' 
+
+# Comando                       # Accion
+
+$ printenv                      # Nos muestra todas las variables de entorno.
+
+$ echo $<variablentorno>        # Imprime en pantalla una variable de entorno.
+
+$ echo $PATH                    # $PATH es importante ya que tiene todas las rutas los binarios que ejecuta nuestro sistema, cuando ejecutas algo como PHP en esta variable lo va a buscar.
+
+
+# Comandos de busquedas
+
+$ Comando                               # Accion
+
+$ which <binario>                       # Busca en todas las rutas del PATH para encontrar un binario(un programa que se va ejecutar)
+
+$ find <path> -name <file>              # Al igual que which busca un archivo.
+$ find <path> -type d -name <nombre>   # Busca solamente directorios por la opcion 'type d', tambien se puede usar 'type f' para buscar solo archivos.
+$ find ./ -size 20M                     # Busca archivos que sean mayores a un tamaño.
+
+
+
+
+
