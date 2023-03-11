@@ -6,9 +6,9 @@ Inicio de Curso Manejo de la Terminal @Platzi
 
 # Las razones para aprender a usarla son:
     #1. Tenemos mucha **flexibilidad** ya que podemos hacer procesos dentro de nuestra computadora de una forma más eficiente, mover grandes 
-        # volúmenes de datos de forma rápida, así como hacer copias e incluso programar procesos que se ejecuten en cierto tiempo
+        ## volúmenes de datos de forma rápida, así como hacer copias e incluso programar procesos que se ejecuten en cierto tiempo
     #2. Normalmente hacer cosas en la terminal como copiar archivos o buscarlos tiende a ser mucho más rápido que hacerlo a través de una interfaz
-        # gráfica. Por lo tanto podemos decir que tenemos una **velocidad** mayor al realizar dichos procesos en la terminal.
+        ## gráfica. Por lo tanto podemos decir que tenemos una **velocidad** mayor al realizar dichos procesos en la terminal.
     #3. **No siempre contaremos con una interfaz gráfica** o puede llegar a fallar.
 
 
@@ -152,7 +152,7 @@ $ cat < peanuts.txt > banana.txt      # Con '<' redirigmos el STDIN, normalmente
 # |        $ ls -la | less                          # Redirige el STDOUT de 'ls -la' y lo convierte en el STDIN de 'less'.
 
 # | tee    $ ls -lh | less | tee output3.txt        # '| tee' Te permite redirigir el STDOUT en 2 flujos diferentes, en este caso el STDOUT de 'ls -la | less' lo muestra 
-                                                        # en la terminal y a su vez genera el archivo 'output3.txt' con el STDOUT.   
+                                                        ## en la terminal y a su vez genera el archivo 'output3.txt' con el STDOUT.   
 
 # | tee    $ ls | tee peanuts.txt banan.txt         # redirige el STDOUT de 'ls' hacia los archivos 'peanuts.txt' y 'banan.txt' y a su ves muestra en la terminal el 'ls'.
 
@@ -247,15 +247,67 @@ $ echo $PATH                    # $PATH es importante ya que tiene todas las rut
 
 # Comandos de busquedas
 
-$ Comando                               # Accion
+$ Comando                                        # Accion
 
-$ which <binario>                       # Busca en todas las rutas del PATH para encontrar un binario(un programa que se va ejecutar)
+$ which <binario>                                 # Busca en todas las rutas del PATH para encontrar un binario(un programa que se va ejecutar)
 
-$ find <path> -name <file>              # Al igual que which busca un archivo.
-$ find <path> -type d -name <nombre>   # Busca solamente directorios por la opcion 'type d', tambien se puede usar 'type f' para buscar solo archivos.
-$ find ./ -size 20M                     # Busca archivos que sean mayores a un tamaño.
+$ find <path> -name <file>                        # Al igual que which busca un archivo.
+$ find <path> -type d -name <nombre>              # Busca solamente directorios por la opcion 'type d', tambien se puede usar 'type f' para buscar solo archivos.
+$ find ./ -size 20M                               # Busca archivos que sean mayores a un tamaño.
+
+$ dpkg --get-selections | grep <nombreDelPaquete> # Nos ayuda a buscar un paquete en especifico instalado
+$ grep "string" archivo_*                         # grep buscará la palabra "string" en todos los archivos que comienzen por "archivo_" y te los mostrará.
+$ grep "Imagina .* algo" test.txt                 # grep buscará alguna coincidencia, la expresion .* indica que ahí dentro puede haber una o más letras,
+                                                    ##cualquier que sea, así que podrías leerla como: Imagina (cualquier cosa) algo. Ejemplo encontraria "Imagina que quieres buscar algo"
+$ cat ArchivoLargo.txt | grep "algo que busco"    # cat Te listará todo el contenido de ese archivo, grep te filtrará únicamente lo que quieres ver.
+$ grep "algo que busco" <nombrearchivo>           # Va a buscar dentro del archivo la frase indicada
+$ grep -vi "Algo que busco" <nombrearchivo>       # la opcion "-v" nos ayuda a buscar todo lo que NO coincida y la "-i" ignora si es minuscula o mayuscula
+
+$ wc <nombrearchivo>                              # wc (wordcount) nos muestra 3 datos primero cuantas lineas tiene (opcion -l), cuantos caracteres tiene(-w) y el numero de bits(-c).
 
 
+# Utilidades de Red
+
+$ Comandos                       # Accion
+
+$ ifconfig                       # Muestra informacion de la red. A la izquierda es el dispositivo de red, a la derecha nos muestra direccin ip,mascara de red, la direccion de transmision (broadcast).
+
+$ ping www.google.comando        # Nos dice si una pagina esta activa.
+
+$ curl www.google.com            # Nos muestra el html de una pagina. 
+
+$ wget www.google.com            # Descarga el archivo directamente a nuestra computadora.
+
+$ traceroute  www.google.com     # Cuando visitamos una direccion IP nos muestra todos los puntos(PC) que nos conectamos.
+
+$ netstat -i                     # Con la opcion -i nos muestra los dispotivos de red.
 
 
+# Compresion de archivos
 
+$ Comando                                          # Accion
+
+$ tar -cvf <archivoacomprimir>.tar <file>          # '-c' de comprimir un archivo, '-v' nos muestra el otuput en terminal, '-f' que nos va a comprir un file. 
+$ tar -cvzf <archivoacomprimir>.tar.gz <file>      # Con la 'z' se comprime en gzip, es un algoritmo de compresion mas eficiente, sobre todo en texto plano.
+
+$ tar -xvf <archivo>.tar                           # Nos descomprime un archivo .tar
+$ tar -xzvf <archivo>.tar.gz                       # Descomprimimos el archivo .tar.gzip 
+
+$ zip -r <newnamefile>.zip  <archivoacomprimir>    # Comprimimos un archivo en zip.
+$ unzip <archivo.zip>                              # Descomprime un archivo zip.
+
+$ rar a <newnamefile>.rar <archivoacomprimir>      # Comprimimos un archivo en rar.
+$ rar x <archivo.rar>                              # Descomprime un archivo rar.
+
+
+# Manejo de Procesos 
+
+$ Comando                               #  Accion
+
+$ ps                                    # Nos muestra los procesos o comandos que estan corriendo en la terminal actualmente(Background).
+
+$ kill <#PID>                           # Para matar un proceso.
+$ kill -KILL <#PID>                     # Mata un proceso de manera abrupta.
+
+$ top                                   # nos muestra los procesos que estan usando mas recursos con la tecla h te muestra la ayuda, con la u friltramos por usuario
+$ htop                                  # Es una version mejorada de top
