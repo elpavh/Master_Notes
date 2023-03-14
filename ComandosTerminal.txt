@@ -311,3 +311,10 @@ $ kill -KILL <#PID>                     # Mata un proceso de manera abrupta.
 
 $ top                                   # nos muestra los procesos que estan usando mas recursos con la tecla h te muestra la ayuda, con la u friltramos por usuario
 $ htop                                  # Es una version mejorada de top
+
+$ jobs                                  # Consulta todos los procesos en Foreground, nos muestra el numero de trabajo(No es el PID) y el proceso.
+
+$ fg <numerodetrabajo>                  # Trae un proceso del Foreground de nuevo a la terminal.
+
+$ bg <numerodetrabajo>                  # Trae un proceso del Foreground al Background con lo cual el proceso sigue corriendo en segundo plano y libera la terminal.
+
