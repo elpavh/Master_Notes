@@ -1,0 +1,320 @@
+Inicio de Curso Manejo de la Terminal @Platzi
+
+# ¿Que es la terminal?
+    #Es una interfaz gráfica que simula una linea de comandos y cuando hablamos de una línea de comandos nos referimos a una shell.
+
+
+# Las razones para aprender a usarla son:
+    #1. Tenemos mucha **flexibilidad** ya que podemos hacer procesos dentro de nuestra computadora de una forma más eficiente, mover grandes 
+        ## volúmenes de datos de forma rápida, así como hacer copias e incluso programar procesos que se ejecuten en cierto tiempo
+    #2. Normalmente hacer cosas en la terminal como copiar archivos o buscarlos tiende a ser mucho más rápido que hacerlo a través de una interfaz
+        ## gráfica. Por lo tanto podemos decir que tenemos una **velocidad** mayor al realizar dichos procesos en la terminal.
+    #3. **No siempre contaremos con una interfaz gráfica** o puede llegar a fallar.
+
+
+# Tipos de lineas de comandos (Ejemplos)
+    # Bourne Shell # Bash Shell # Z Shell # C Shell
+    # Korn Shell # Fish Shell # Power Shell
+
+
+# El sistema de archivos, será el árbol por el que nos estaremos moviendo en la terminal.
+        # Representacion del sistema de archivos.
+                           | / |
+                             V      
+                 V-----V-----V--------V-----V
+              | etc | dev  | home  | usr  | var  |   
+                               V       V
+               V-------V-------V       V  
+             | jono | mako | cory |  | lib |
+                V
+                V-------V
+            | work | photos |
+
+    # En la carpeta home es donde se encuentran los usuarios del sistema operativo. Dentro de la terminal identificamos esta carpeta con el símbolo llamado virgulilla ~.
+
+
+# ¿Que es un comando ?
+    # 1. Un programa ejecutable.
+    # 2. Un comando de utilidad de la shell.
+    # 3. Una funcion de shell.
+    # 4. Un  alias.
+
+
+$ Comando                     #Accion                   ##Comandos Basicos
+
+$ ls                          # Lista los archivos y carpetas del directorio.
+$ ls -l                       # Lista los archivos y carpetas con toda la información de cada uno.
+$ ls -lh                      # Lista los archivos y carpetas con la información legible para humanos.
+$ ls -la                      # Lista los incluyendo los que estan ocultos.
+$ ls -lS                      # Lista los elementos del mas pesado al mas liviano.
+$ ls -llegar                  # Lista los elementos del mas liviano al mas pesado.
+$ ls -d                       # Lista unicamente los directorios/carpetas.
+
+$ cd <directorio>             # Para cambiar entre directorios, '$cd' solo te lleva al home, '$cd ..' te lleva una carpeta atras.
+
+$ pwd                         # Imprime la ruta del directorio en el que estas.
+
+$ file <file_name>            # Describe el tipo de archivo que recibe como parametro.
+
+$ tree -L <2>                 # Despliega los elementos que se encuentren en el nivel indicado (2).
+
+$ mkdir <new_folder>          # Crea un nuevo directorio con el nombre indicado.
+
+$ touch <new_file>            # Crea un archivo con el nombre indicado.
+
+$ cp <original> <name_copia>  # Crea una copia del archivo con el nombre que reciba.
+
+$ mv <file> <path>            # Mueve el archivo a la ubicación deseada.
+$ mv <file> <newname_file>    # Renombra el archivo o directorio.
+
+$ rm <file>                   # Elimina el archivo indicado.
+$ rm -i <file>                # Pide confirmacion en cada archivo a eliminar.
+$ rm -r <directorio>          # Elimina el directorio indicado.
+$ rm -rf <directorio>         # Recursive (r), force (f), elimina todo incluso tu windows.
+
+$ head <file>                 # Muestra las primeras 10 líneas de un archivo de texto.
+$ head <file> -n 15           # Muestra las primeras lineas que recibe en este caso 15.
+
+$ tail <file>                 # Muestra las ultimas 10 lineas de un archivo de texto.
+$ tail <file> -n 15           # Muestra las primeras lineas seleccionadas (15).
+
+$ cat <file1> <file2>         # Concatena la salida de 2 archivos, de igual manera puede ser usarse solo con 1.
+
+$ less <file>                 # Muestra todo el archivo de texto, con '/' se puede buscar alguna palabra.
+
+$ nautilus <directorio>       # Abre el sistema de archivos (Linux).
+
+$ type <comando>              # Es un comando que nos permite analizar la naturaleza de otros comandos.
+
+$ alias <l="ls -lh">          # Crea un alias temporal, solo dura durante la sesion.
+
+$ help <comando>              # Muestra informacion sobre como usar un comando en BASH.
+$ man <comando>               # Muestra el maual del comando indicado.
+$ info <comando>              # Muestra el manual del comando indicado.
+$ whatis <comando>            # Muestra una descripcion corta del comando indicado.
+
+$ date                        # Muestra la hora que es.
+$ cal                         # Muestra el calendario en la terminal.
+
+# ¿ Que son los Wildcards?
+    # Los wildcards son una serie de patrones o caracteres especiales que nos permiten realizar busquedas avanzadas.
+
+# Wildcard       $ Ejemplos                      # Accion
+
+# *              $ ls *.txt                      # En este caso filtra todos los archivos que terminen en .txt .
+# *              $ ls datos*                     # En este caso muestra los archivos que empiecen con 'datos'.
+
+# ?              $ ls datos?.txt                 # Filtrar archivos que contengan solo un carácter después de la palabra especificada.  (Ejemplo resultado datos1.txt)
+# ?              $ ls datos??.txt                # Filtrar archivos que contengan solo 2 carácter después de la palabra especificada. (Ejemplo resultado datos12.txt)
+
+# []              $ ls [a]*                      # Muestra todos los archivos que comiencen con 'a'.
+# []              $ ls [aP]*                     # Muestra todos los archivos que comiencen con 'a' o 'P'.
+
+# [!]              $ ls [!aP]*                   # Muestra todos los archivos que NO comiencen con 'a' o 'P'.
+
+# [[:upper:]]     $ ls [[:upper:]]*              # Filtra los archivos que empiecen con mayusculas, [[:upper:]] solo representa un caracter en mayuscula.
+
+# [[:lower:]]     $ ls [[:lower:]]*              # Filtra los archivos que empiecen con minuscula, [[:upper:]] solo representa un caracter en minuscula.
+
+# [[:digit:]]     $ ls [[:digit:]]*              # Filtra los archivos que empiecen con un numero.
+
+# [[:alpha:]]     $ ls [[:alpha:]]*              # Filtra los archivos que empiecen con una letra.
+
+# [[:alnum:]]     $ ls [[:alnum:]]*              # Filtra los archivos que tengan con una letra o numero (alfanumerico).
+
+
+#Redirecciones (STDIN, STDOUT y STDERR)
+
+                                  --> STDOUT (1)
+        STDIN(0) --> COMANDO  -->
+                                  --> STDERR (2)
+
+    # En el diagrama tenemos una entrada que se le conoce como standard input (stdin) que proviene de nuestro teclado; pero que también lo podemos 
+        # redirigir desde archivos de texto, el output (stdout) es la el resultado correcto del stdin, el stderr entra en accion en caso de error
+
+# Ejemplo                             # Accion
+
+$ ls Documents > ejemplo.txt          #  Con '>' redirigmos el stdout del comando 'ls' a un archivo.txt, si este ya existe lo SOBREESCRIBE.
+$ ls Documents >> ejemplo.txt         # la diferencia entre '>' y '>>' es que con '>>' concatenamos la salida en el archivo en lugar de SOBREESCRIBIR.
+
+$ ls Aasdads 2> error.txt             # Con '2>' redirigmos el STDERR al archivo .txt.
+$ ls Aasdads 2>> error.txt            # Con '2>>' redirigmos y concatenamos el STDERR al archivo .txt.
+
+$ ls Documents >> ejemplo.txt 2>&1    # Con '2>&1' nos sirve para que el output se rediriga y concatene por el '>>' con o sin error.  
+
+$ cat < peanuts.txt > banana.txt      # Con '<' redirigmos el STDIN, normalmente en el comando cat le enviamos un archivo y ese archivo se convierte en el STDIN,
+                                        # en este caso nosotros redirigmos Peanuts.txt para ser el STDIN. Despues el output de 'cat peanuts.txt' va a ser redirigido al archivo banana.txt.
+
+#Redirecciones: Pipe operators 
+
+#Simbolo   $ Ejemplo                                # Accion
+
+# |        $ ls -la | less                          # Redirige el STDOUT de 'ls -la' y lo convierte en el STDIN de 'less'.
+
+# | tee    $ ls -lh | less | tee output3.txt        # '| tee' Te permite redirigir el STDOUT en 2 flujos diferentes, en este caso el STDOUT de 'ls -la | less' lo muestra 
+                                                        ## en la terminal y a su vez genera el archivo 'output3.txt' con el STDOUT.   
+
+# | tee    $ ls | tee peanuts.txt banan.txt         # redirige el STDOUT de 'ls' hacia los archivos 'peanuts.txt' y 'banan.txt' y a su ves muestra en la terminal el 'ls'.
+
+# sort     $ ls -lh | sort | tee output4.txt        # con el filtro 'sort' organizamos alfabaticamente una salida.
+
+
+# Operadores de control
+
+# Simbolo   $ Ejemplo                                # Accion
+
+# ;        $ ls; mkdir carpeta1, cal                # Con ';'Se ejecutan los comandos de manera sincrona, primero 'ls', despues 'mkdir' y al final 'cal'.
+
+# &        $ ls & date & cal                        # Por cada comando que yo ejecute se va abrir una shell en segundo plano (va usar un hilo de mi procesador por cada comando que este ejecutando)
+
+# &&       $ mkdir test && cd test                  # (AND) Solo si el comando 'mkdir test' termina correcto ejecuta el segundo comando 'cd test'.
+
+# ||       $ cd asdf || echo"Yes"                   # (OR) Va ejecutar los 2 comandos a pesar de que 'cd asdf' va a mandar error.
+
+$ (cd asd || touch pruebas.txt) && echo "Correcto"  # Si cual quiera de los dos comandos 'cd asd' o 'touch pruebas.txt' es correcto, va ejecutar el echo 'correcto'.
+
+
+# Tipos de archivo (Vienen al principio cuando usas el comando 'ls -l')
+
+# Simbolo           # Tipo de archivo
+
+# -                 # Un archivo normal.
+
+# d                 # Un directorio.
+
+# l                 # Un link simbolico. Son un tipo de archivo que hace referencia a algun lugar
+
+# b                 # Un archivo de bloque especial. Manejan informacion de los bloqueos de datos como una USB.
+
+# Manejo de permisos y usuarios 
+
+    # existen 3 tipos de permisos R (read), W (write), y X (execute)
+
+# Tabla de permisos
+
+    |   Dueño   |    Grupo    |    World    |
+    | r   w   X |   r   -   x |   r   -   x
+    | 1 | 1 | 1 |-| 1 | 0 | 1 |-| 1 | 0 | 1 |
+          7             5             5             # Modo octal.
+
+# Modo simbolico            
+
+    | Simbolo  |   Significado          |
+    |    u     | Solo para el usuario   |
+    |    g     | Solo para el grupo     |
+    |    o     | Solo para otros (world)|
+    |    a     | Aplica para todos      |
+
+$ Comando                       # Accion      ## Comandos para cambiar permisos
+
+$ chmod 755 mitexto.txt         # Asigna permisos 7(rwx) para dueño, 5 (r-x) para Grupo y World.
+
+$ chmod g+w mitexto.txt         # Asigna permisos de escritura (write) al grupo (g) del archivo mitexto.txt.
+
+$ chmod o-x mitexto.txt         # Quita permisos de ejecucion (x) a World (o) del archivo mitexto.txt.
+
+$ chmod g-rx,o-rx mitexto.txt   # Quita permiso de ejecucion(x) y lectura(r) a Grupo (u) y World (o).
+
+$ sudo su                       # Entramos en el modo root.
+
+$ sudo passwd root              # Asignamos password al usuario root.
+
+$ su <usuario>                  # Cambiamos de usuario. SU (Switch User).
+
+$ chown <nuevousuario> <file>   # Chown(change owner) cambia el usuario dueño de algun archivo.
+
+$ whoami                        # Nos dice el usuario en el que estamos.
+
+$ ln -s <ruta> <nombrelink>     # Creamos un link simbolico el cual es como un acceso directo desde terminal.   ln -s /mnt/c/Users/pablo.valenzuela homewindows
+
+
+# ¿Que son las variables de entorno?
+    
+    # La shell tiene una configuracion con diferentes valores que se pueden acceder atraves de las variables de entorno.
+
+    # Para modificar las variables de entorno abrimos el archivo .bashrc, en caso de ser zsh seria .zshrc.
+
+    # Dentro del archivo .bashrc para agregar un path seria  'PATH=$PATH:home/elpvh/bin' 
+
+# Comando                       # Accion
+
+$ printenv                      # Nos muestra todas las variables de entorno.
+
+$ echo $<variablentorno>        # Imprime en pantalla una variable de entorno.
+
+$ echo $PATH                    # $PATH es importante ya que tiene todas las rutas los binarios que ejecuta nuestro sistema, cuando ejecutas algo como PHP en esta variable lo va a buscar.
+
+
+# Comandos de busquedas
+
+$ Comando                                        # Accion
+
+$ which <binario>                                 # Busca en todas las rutas del PATH para encontrar un binario(un programa que se va ejecutar)
+
+$ find <path> -name <file>                        # Al igual que which busca un archivo.
+$ find <path> -type d -name <nombre>              # Busca solamente directorios por la opcion 'type d', tambien se puede usar 'type f' para buscar solo archivos.
+$ find ./ -size 20M                               # Busca archivos que sean mayores a un tamaño.
+
+$ dpkg --get-selections | grep <nombreDelPaquete> # Nos ayuda a buscar un paquete en especifico instalado
+$ grep "string" archivo_*                         # grep buscará la palabra "string" en todos los archivos que comienzen por "archivo_" y te los mostrará.
+$ grep "Imagina .* algo" test.txt                 # grep buscará alguna coincidencia, la expresion .* indica que ahí dentro puede haber una o más letras,
+                                                    ##cualquier que sea, así que podrías leerla como: Imagina (cualquier cosa) algo. Ejemplo encontraria "Imagina que quieres buscar algo"
+$ cat ArchivoLargo.txt | grep "algo que busco"    # cat Te listará todo el contenido de ese archivo, grep te filtrará únicamente lo que quieres ver.
+$ grep "algo que busco" <nombrearchivo>           # Va a buscar dentro del archivo la frase indicada
+$ grep -vi "Algo que busco" <nombrearchivo>       # la opcion "-v" nos ayuda a buscar todo lo que NO coincida y la "-i" ignora si es minuscula o mayuscula
+
+$ wc <nombrearchivo>                              # wc (wordcount) nos muestra 3 datos primero cuantas lineas tiene (opcion -l), cuantos caracteres tiene(-w) y el numero de bits(-c).
+
+
+# Utilidades de Red
+
+$ Comandos                       # Accion
+
+$ ifconfig                       # Muestra informacion de la red. A la izquierda es el dispositivo de red, a la derecha nos muestra direccin ip,mascara de red, la direccion de transmision (broadcast).
+
+$ ping www.google.comando        # Nos dice si una pagina esta activa.
+
+$ curl www.google.com            # Nos muestra el html de una pagina. 
+
+$ wget www.google.com            # Descarga el archivo directamente a nuestra computadora.
+
+$ traceroute  www.google.com     # Cuando visitamos una direccion IP nos muestra todos los puntos(PC) que nos conectamos.
+
+$ netstat -i                     # Con la opcion -i nos muestra los dispotivos de red.
+
+
+# Compresion de archivos
+
+$ Comando                                          # Accion
+
+$ tar -cvf <archivoacomprimir>.tar <file>          # '-c' de comprimir un archivo, '-v' nos muestra el otuput en terminal, '-f' que nos va a comprir un file. 
+$ tar -cvzf <archivoacomprimir>.tar.gz <file>      # Con la 'z' se comprime en gzip, es un algoritmo de compresion mas eficiente, sobre todo en texto plano.
+
+$ tar -xvf <archivo>.tar                           # Nos descomprime un archivo .tar
+$ tar -xzvf <archivo>.tar.gz                       # Descomprimimos el archivo .tar.gzip 
+
+$ zip -r <newnamefile>.zip  <archivoacomprimir>    # Comprimimos un archivo en zip.
+$ unzip <archivo.zip>                              # Descomprime un archivo zip.
+
+$ rar a <newnamefile>.rar <archivoacomprimir>      # Comprimimos un archivo en rar.
+$ rar x <archivo.rar>                              # Descomprime un archivo rar.
+
+
+# Manejo de Procesos 
+
+$ Comando                               #  Accion
+
+$ ps                                    # Nos muestra los procesos o comandos que estan corriendo en la terminal actualmente(Background).
+
+$ kill <#PID>                           # Para matar un proceso.
+$ kill -KILL <#PID>                     # Mata un proceso de manera abrupta.
+
+$ top                                   # nos muestra los procesos que estan usando mas recursos con la tecla h te muestra la ayuda, con la u friltramos por usuario
+$ htop                                  # Es una version mejorada de top
+
+$ jobs                                  # Consulta todos los procesos en Foreground, nos muestra el numero de trabajo(No es el PID) y el proceso.
+
+$ fg <numerodetrabajo>                  # Trae un proceso del Foreground de nuevo a la terminal.
+
+$ bg <numerodetrabajo>                  # Trae un proceso del Foreground al Background con lo cual el proceso sigue corriendo en segundo plano y libera la terminal.
+
