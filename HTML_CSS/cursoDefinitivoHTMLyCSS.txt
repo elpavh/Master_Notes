@@ -15,7 +15,7 @@
     # Perfiles de un Web Developer: Frond-end,
 
 # Front-end: Frontend es la parte de un programa o dispositivo a la que un usuario puede acceder directamente. Son todas las tecnologías de diseño y desarrollo web que corren en el navegador y que se encargan 
-    de la interactividad con los usuarios. https://www.w3.org/standards/
+    de la interactividad con los usuarios. https://www.w3.org/standards/   etiquetas: https://i.emezeta.com/weblog/html5-cheatsheet/html5-cheatsheet-2019.pdf
 
     # Estandares: HTML: https://devdocs.io/html/ , https://htmlreference.io/  CSS: https://devdocs.io/css/ , https://cssreference.io/ JavaScript: https://devdocs.io/javascript/ 
 
@@ -33,7 +33,7 @@
 
     # Coolors: Paletas de colores. link: https://coolors.co/palettes/trending
     
-    # Unsplash: Imagenes gratis (Da los créditos a los fotógrafos 😉). link: https://unsplash.com/es , https://pixabay.com/es/
+    # Unsplash: Imagenes gratis (Da los créditos a los fotógrafos 😉). link: https://unsplash.com/es , https://pixabay.com/es/ , https://www.pexels.com/es-es/
 
     # FontPair: Ver cuales fuentes puedes combinar. Y obviamente Google Fonts para obtener esas fuentes. links: https://www.fontpair.co/fonts/anote , https://fonts.google.com/
 
@@ -45,6 +45,9 @@
 
     # Practica Jugando: Grid Layout: https://cssgridgarden.com/#es ,Flexbox https://flexboxfroggy.com/#es , https://flukeout.github.io/ , http://www.flexboxdefense.com/ , https://www.w3schools.com/ , https://css-tricks.com/
 
+    # Convertidores: WEBP A PNG: https://imagen.online-convert.com/es/convertir/webp-a-png  QUITAR FONDO IMAGEN: https://es.clippingmagic.com/  QUITAR OBJETOS DE IMG:  https://theinpaint.com/
+
+    # Comprimir imagenes: https://tinypng.com/ , https://www.iloveimg.com/es/comprimir-imagen/comprimir-jpg
 
 
 # Back-end:  programación corresponde al lado opuesto a un Front-end en un sitio web o aplicación, ya que el Backend trabaja en el lado del servidor, mientras el Frontend lo hace en el lado del cliente. Es el responsable de 
@@ -95,3 +98,98 @@
 
         # Footer: pie de página. Esto se encuentra al fondo del sitio web, salvo en casos de sitios web donde el scroll (o navegación hacia abajo) es infinito, por ende, no tendría sentido ponerlo al fondo.
 
+
+    # Etiquetas del cuerpo del documento (body):
+
+        # article: diferencia partes del contenido que pueden vivir por sí mismas.        
+        # article: es la parte de nuestro contenido que puede vivir por sí mismo. Pueden haber tantos artícle como proyectos o eventos tenga nuestro portafolio.
+
+        # nav: para hacer menús de navegación.
+
+        # aside: contenido menos relevante, como publicidad, etc.
+
+        # section: sirve para diferenciar las secciones principales del contenido.
+
+        # header: cabecera del documento.
+
+        # footer: pie de página del documento.
+
+        # table: tablas de contenidos, similar a la estructura de las hojas de calculo.
+
+        # ul y ol: listas de items.
+
+        # div: cualquier división para organizar el contenido.
+
+        # h1 a h6: son etiquetas para indicar títulos con un estilo que destaca del resto.
+
+        # p: define el texto de un párrafo.
+
+        # small: aplica una apariencia de texto reducido en tamaño.
+
+        # strong: aplica al texto un formato de negritas.
+
+        # a: corresponde a un ancla o enlace a una url interna o externa del documento.
+
+        # img: con esta etiqueta podemos enlazar imágenes en el documento.
+
+        # figure: le da un contexto semántico a las imágenes.
+
+
+    # Tipos de imágenes para web
+
+        # Lossless (sin pérdida):
+
+            # Capturan todos los datos del archivo original.
+
+            # No se pierde nada del archivo original.
+
+            # Puede comprimirse, pero podrá reconstruir su imagen al estado original
+
+        # Lossy (con pérdida):
+
+            # Se aproximan a su imagen original.
+
+            # Podría reducir la cantidad de colores en su imagen o analizar la imagen en busca de datos innecesarios.
+
+            # Por consiguiente puede reducir su tamaño, lo que mejora el tiempo de carga de la página, pero pierde su calidad.
+
+            # Los archivos tipo lossy son mucho más livianos que los archivos tipo lossless, por lo que son ideales para usar en sitios 
+                en donde el tamaño del archivo y la velocidad de descarga son importantes.
+
+
+    # Formatos de imagen para web
+
+        # GIF (Graphics Interchange Format): Formato de imagen sin pérdida, no se puede comprimir
+
+        # PNG 8 (Portable Network Graphics): Formato de imagen sin pérdida, uso de colores de 256, se utiliza para logotipos e iconos para la página.
+
+        # PNG 24 (Portable Network Graphics): Formato de imagen sin pérdida, utilización de colores ilimitados, alta calidad, si intentamos comprimir no
+             ayudará demasiado por la gran cantidad de colores.
+
+        # JPG / JPEG (Photographic Experts Group): Formato de imagen con pérdida, perdemos calidad a la hora de comprimirlas, pero llegan a ser óptimas 
+            para la carga en la página web.
+        
+        # SVG - Vector (Scalable Vector Graphics): Formato de imagen muy ligero sin pérdida, con svg no perdemos calidad, ya que está compuesta por vectores.
+
+        # WebP: Es un formato gráfico en forma de contenedor que sustenta tanto compresión con pérdida como sin ella. ​​Fue desarrollado por Google.
+
+
+# Tamaños de imagenes
+
+    # ¿Cuál es el peso ideal de una imagen para usarla en la web? 
+        # 70KB.
+
+    # ¿Cuál es el peso máximo de una imagen para usarla en la web?
+        # 1MB
+
+    # ¿Qué herramientas podemos utilizar para trabajar con imágenes?
+        # TinyPNG: Para mejorar el tamaño de imágenes pasándolas por un proceso de compresión.
+        
+        # Verexif: Para retirar metadatos de nuestras fotos tomadas desde un celular.
+
+    # ¿Qué metadatos puede borrar Verexif?
+        # La hora en que se tomó la foto, Lugar desde donde tomó.
+    
+
+
+        
