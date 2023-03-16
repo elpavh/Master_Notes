@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <video src="../pics/videoastronautausa.mp4#t=03,08" controls preload="auto"></video> 
+        <!-- el atributo controls ayuda a poner los controles (play,pause) al video  -->
+        <!-- preload ayuda a que el video se pueda renderizar cuando la pagina se empieza a crear en el navegador, esto es para que no exista mucho tiempo de espera -->
+        <!-- se agrega '#t=03,08' al atributo 'src' y con esto indicamos que la reproducion se posicione en el segundo 3 y termine en el segundo 8 con posibilidad de continuar -->
+    </section>
+
+    <section><!-- En el ejemplo de abajo agregamos el atributo source en lugar de src dentro de la etiqueta de video, aqui podemos adjuntar el mismo video en diferente formato,
+                    por si el nagevador no interpreta el primer formato, carge el otro.-->
+        <video controls preload="auto">
+            <source src="../pics/videoastronautausa.mp4#t=03,08">
+            <source src="../pics/videoastronautausa.m4v#t=03,08">
+        </video>
+    </section>
+    
+</body>
+</html>

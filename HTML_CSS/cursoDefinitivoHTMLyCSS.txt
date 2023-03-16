@@ -118,7 +118,7 @@
 
         # ul y ol: listas de items.
 
-        # div: cualquier división para organizar el contenido.
+        # div: es un contenedor cualquiera  sirve para cualquier división para organizar el contenido.
 
         # h1 a h6: son etiquetas para indicar títulos con un estilo que destaca del resto.
 
@@ -132,7 +132,7 @@
 
         # img: con esta etiqueta podemos enlazar imágenes en el documento.
 
-        # figure: le da un contexto semántico a las imágenes.
+        # figure: le da un contexto semántico a las imágenes. Esta etiqueta se usa en las imagenes y con figcaption le damos una descripcion de bajo de la imagen.
 
 
     # Tipos de imágenes para web
@@ -189,6 +189,8 @@
 
     # ¿Qué metadatos puede borrar Verexif?
         # La hora en que se tomó la foto, Lugar desde donde tomó.
+
+# 
     
 
 
