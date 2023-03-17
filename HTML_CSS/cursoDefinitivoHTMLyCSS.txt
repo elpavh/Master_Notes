@@ -1,5 +1,10 @@
 # Curso Definitivo HTML y CSS  ## Platzi
 
+# Atajos VSC: 
+    # (Control + k) + (control + c)  = Comentar lo seleccionado. 
+
+    # Para seleccionar varias palabras iguales y modificarlas al mismo tiempo en VScode pueden usar control + D
+
 # HTML: Estructura de los documentos que se visualizan en los navegadores Es el lenguaje con el que clasificamos o etiquetamos cada parte del documento, dejándole saber al navegador qué información
     va a visualizar y qué valor tiene para nosotros. De esa manera, presentamos: Barras de Navegación, Secciones, artículos, listas, títulos de diferentes tamaños, audios, videos, imágenes, entre otros.
 
@@ -48,6 +53,8 @@
     # Convertidores: WEBP A PNG: https://imagen.online-convert.com/es/convertir/webp-a-png  QUITAR FONDO IMAGEN: https://es.clippingmagic.com/  QUITAR OBJETOS DE IMG:  https://theinpaint.com/
 
     # Comprimir imagenes: https://tinypng.com/ , https://www.iloveimg.com/es/comprimir-imagen/comprimir-jpg
+
+    # Guias: https://losapuntesdemajo.vercel.app/
 
 
 # Back-end:  programación corresponde al lado opuesto a un Front-end en un sitio web o aplicación, ya que el Backend trabaja en el lado del servidor, mientras el Frontend lo hace en el lado del cliente. Es el responsable de 
@@ -190,8 +197,10 @@
     # ¿Qué metadatos puede borrar Verexif?
         # La hora en que se tomó la foto, Lugar desde donde tomó.
 
-# 
-    
+
+
+# CSS: Cascading Style Sheet (Cascading es el nombre del algoritmo que aplica al momento de implementar los estilos)
+
 
 
         

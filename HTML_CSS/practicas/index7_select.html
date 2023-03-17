@@ -1,0 +1,30 @@
+<!-- file:///C:/Users/w9pab/Documents/MasterNotes/HTML_CSS/practicas/index7_select.html -->
+<!-- Etiqueta Form e input (Select) clase 19-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+</head>
+<body>
+    <main>
+        <!-- la etiqueta <select> permite crear la lista con las etiquetas <option>  no es la mejor practica para hacerlo-->
+        <!-- <select name="cursos" id="">
+            <option value="JavaScript">JavaScript</option>
+            <option value="HTML5">HTML5</option>
+            <option value="CSS3">CSS3</option>
+            <option value="Web Standards">Web Standards</option>
+        </select> -->
+
+        <input list="cursos"> <!-- Esta es una buena practica, a diferencia del de arriba en option el atributo value es el que se va a mostrar en pantalla -->
+        <datalist id="cursos">
+            <option value="JavaScript"></option>
+            <option value="HTML5"></option>
+            <option value="CSS3"></option>
+            <option value="Web Standards"></option>
+        </datalist>    <!-- De esta manera puedes escribir para buscar la opcion del de la lista -->
+    </main>
+</body>
+</html>

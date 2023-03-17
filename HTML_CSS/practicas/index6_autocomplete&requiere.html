@@ -1,0 +1,37 @@
+<!-- file:///C:/Users/w9pab/Documents/MasterNotes/HTML_CSS/practicas/index6_autocomplete&requiere.html -->
+<!-- Etiqueta Form e input (Autocomplete y require) clase 18-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+</head>
+<body>
+    <main>
+        <!-- El atributo autocomplete de la etiqueta input, nos ayuda a autocompletar si el usuario ya ha respondido antes esta pregunta-->
+        <!-- El atributo required hace que el input no pueda estar vacio al momento de enviar el formulario -->
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete -->
+        <form action="">
+            <label for="nombre">
+                <span>¿Cual es tu nombre?</span>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+            </label>
+            <label for="correo">
+                <span>¿Cual es tu correo?</span>
+                <input type="email" id="correo" name="correo" autocomplete="email">
+            </label>
+            <label for="pais">
+                <span>¿En que pais vives?</span>
+                <input type="text" id="pais" name="pais" autocomplete="country">
+            </label>
+            <label for="cp">
+                <span>¿Cual es tu codigo postal?</span>
+                <input type="text" id="cp" name="cp" autocomplete="postal-code">
+            </label>
+            <input type="submit">
+        </form>
+    </main>
+</body>
+</html>
