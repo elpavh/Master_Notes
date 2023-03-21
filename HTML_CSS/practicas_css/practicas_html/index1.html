@@ -1,0 +1,36 @@
+<!-- file:///C:/Users/w9pab/Documents/MasterNotes/HTML_CSS/practicas_css/practicas_html/index1.html -->
+<!-- Como utilizamos CSS Clase 22 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase CSS</title>
+    <link rel="stylesheet" href="../practicas_css/style.css"> <!-- link nos ayuda a referenciar donde esta el archivo de css (MEJOR PRACTICA)-->
+    <!-- Es una buena practica tener una sola carpeta para el html y css-->
+
+    <!-- <style> 
+     p{
+        color: blue;
+        font-size: 35px;
+     }
+
+    </style> style tag nos permite implementar CSS, NO ES LA MEJOR PRACTICA, se utiliza cuando es poco el codigo css -->
+
+</head>
+<body>
+    <!-- <p style="font-size:30px;" style="">Soy un texto con estilo embebido</p>  -->
+    <!-- el atributo style en diferentes tag, nos permite implementar estilo embebido,
+    automaticamente embebiendo/inyectando  un estilo a la etiqueta en forma de atributo. NO ES LA MEJOR PRACTICA -->
+    <!-- No es bueno agregarle estilos a las etiquetas porque esto puede reescribir todos los estilos que tu tengas en CSS que este dentro de la etiqueta-->
+
+    <!-- <p> Texto modificado del estilo mediante el tag Style</p> -->
+
+    <main>
+        <p class="parrafo">Soy un texto</p>
+        <p id="texto">Soy otro texto</p>
+    </main>
+
+</body>
+</html>

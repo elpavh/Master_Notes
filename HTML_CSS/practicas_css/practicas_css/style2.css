@@ -1,0 +1,32 @@
+.main-nav{
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 0;
+    background-color: #13a4a4;
+}
+
+.main-nav__item{
+    display: inline-block;
+}
+
+.main-nav__item a {  /* A esto se le llama ser especifico en CSS, estamos diciendo que a todas las etiquetas a que estan adentro de del elemento .main-nav__item aliquele el estilo: */
+     color: white;
+     padding: 5px;
+     border-radius: 2px;
+     text-decoration: none;
+}
+
+.main-nav__item a:hover{
+    color: blue;
+}
+
+.main-nav__item a:active{ /* Se manda llamar la seudo clase con :  */
+    color: red;
+}
+/* El padding es una dimension/espacio interna que le estamos dando 
+    con display modificamos la forma en la que se muestran los elementos en este caso pasa de vertical a horizontal con inline-block
+*/ 
+
+.main-nav__item a::after{ /* Se manda llamar la seudo elemento con ::  */
+    content: " | ";
+}

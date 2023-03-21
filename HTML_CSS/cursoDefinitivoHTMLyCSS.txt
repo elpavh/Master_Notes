@@ -199,7 +199,66 @@
 
 
 
-# CSS: Cascading Style Sheet (Cascading es el nombre del algoritmo que aplica al momento de implementar los estilos)
+# CSS: Cascading Style Sheet (Cascading es el nombre del algoritmo que aplica al momento de implementar los estilos)    
+
+    # Es el estandar parea poder estilizar el proyecto, muestra los elementos de html no como cajas si no con otro tipo de figuras,
+
+    # BEM: https://bem-cheat-sheet.9elements.com/  https://en.bem.info/methodology/faq/#why-bem
+
+
+# Pseudo clases y pseudo elementos
+
+    # Pseudo Clase: Define el estilo de un estado especial de un elemento.  https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
+
+    # Pseudo Elemento: Define el estilo de una parte especifica de un elemento. https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements
+
+    # Anatomía de una regla en CSS: 
+
+        # Selector: directamente decirle a css que elemento quieres agregarle estilo. (body)
+
+        # Declaracion del Estilo:
+
+            # Propiedad: El estilo que se va aplicar (background-color:)
+
+            # Valor: El valor que se le va a dar a la propiedad. (rgb(0,0,0))
+
+            # Ejeplo : body background-color:rgb(000,0,0);
+
+
+# Modelo de Caja:
+
+    # Los elementos que se renderizan son simplemente cajas que son contenedores a los caules se le pueden agregar los siguientes estilos:
+
+        # Margin: Puede ser un espacio externo de la caja hacia afuera.
+
+        # Border: Practicamente es la linea que va a definir a cada uno de los elementos, por default viene transparente.
+
+        # Padding: A diferencia del Margin, este es un espacio interno de la caja hacia adentro, sirve para acomodar elementos dentro de la caja.
+
+        # Content: Puede ser el texto, imagen o cualquier elemento que se vaya a ver despues de renderizar.
+
+            # Width: El largo que quieres que tenga.
+
+            # Height: El alto que quieres que tenga.
+
+    
+    # '*' Selector Universal 
+
+        # box-sizing: border-box: El navegador hace un calculo automatico Del tamano del Width se va a restar el Paddingy el Border, para tener la dimension justa.
+            # No va a recalcular el Margin, este si va a generar un excente. Solo recalcula Padding y Border.
+    
+    # Tip: Hay una forma de hacer que CSS calcule el tamaño de un elemento (width o height, por ejemplo), restándole cierta cantidad.
+
+        # .caja-hijo {width: calc(50% - 20px);}
+
+        # Ejemplo: Imagina que quieres colocar 2 cajas dentro de una caja padre y quieres que cada una tome el 50% de ancho, pero que cada una tenga un margen a la
+             izquierda de 10px. Si colocas width de 50% a cada caja y además le colocas margen, esto hará que las cajas queden una arriba de la otra, porque al 
+            agregarle 20px de espacio en márgenes, vas a hacer que ya no ajuste el 50% a cada caja.
+
+
+
+
+        
 
 
 

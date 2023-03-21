@@ -1,0 +1,122 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #F6F6FE;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.contenedor {
+	max-width: 1000px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.contenedor__cards {
+	margin: 70px 0;
+}
+
+
+.card {
+	background: #FFF;     /* fondo */
+	border-radius: 15px;    /* Borde Redondiado */
+	padding: 20px;			/* Relleno */
+	display: flex;		  /* Es tipo flex por la posicion en el que van los elementos del bloque */
+	align-items: center;	/* Alineando los elementos de forma vertical, centrandolos */
+	position: relative;		/* Posicionamiento relativo es importante para poder acomodar el boton */
+	margin-bottom: 50px;    /* Por si queremos teneder 2 cards */
+}
+
+.card__thumbnail {
+	width: 650px;
+	height: 200px;
+	background: #000;
+	margin-right: 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.card__img {
+	width: 100%;
+}
+
+.card__titulo{
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	font-weight: normal;
+	margin-bottom: 20px;
+
+}
+
+.card__enlace-titulo{
+	color: #000;
+}
+
+.card__extracto{
+	line-height: 28px;
+	color: #6D6D6D;
+	margin-bottom: 20px;
+}
+
+.boton{
+	border: none;
+	min-width: 180px;  /* Ancho Minimo */
+	height: 50px;		 /* Altura de 50 */
+	padding: 0 30px;     /* Relleno arriba y abajo 0, izquierda y derecha de 30 */
+	background: #000;   /* fondo negro*/
+	color: #FFF;          /* color de texto blanco */
+	display: inline-block;   /* Para poder editar lo que seria el padding porque este boton era un enlace */
+	border-radius: 100px;    /* Para que el boton tenga esquinas redondeadas */
+	text-decoration: none;    
+	display: inline-flex;	  /* Es importante para poner el texto a la izquierda y el icono a la derecha, si se le pusiera solo 'flex' abarcaria todo el lugar disponible el boton*/
+	justify-content: space-between;  /* el texto lo pongo a la izquierda y el icono a la derecha con space between */ 
+	align-items: center;			
+	background: #403cc2;
+	transition: .3s ease all;   /* Ancho Minimo */
+}
+
+.boton:hover {
+	background: #1b1881;
+	text-decoration: none;
+}
+
+.boton--absolute { /* Boton con el MODIFICADOR absolute */
+	position: absolute;
+	right: 20px;
+	bottom: -25px;
+}
+
+.boton--verde {
+	background: #7ba771;
+
+}
+
+.boton--verde:hover {
+	background: #437837;
+
+}
+
+.frase{
+	text-align: center; 
+	margin: 70px 0;  /* 70px arriba y abajo, 0 izquierda y derecha */
+}
+
+.frase__texto {
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	font-style: italic;
+}

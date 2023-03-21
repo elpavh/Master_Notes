@@ -1,0 +1,27 @@
+/* 1- Por elemento */
+p{
+    color: blue;
+    font-size: 35px;
+ } 
+/*2- CLASS */
+.parrafo
+{
+    color: red;
+}
+
+/*3- ID */
+#texto{
+    color:orange;
+    font-size: 24px;
+}
+
+
+/* Existen 3 opciones para mandar llamar ciertas etiquetas para agregarle los estilos 
+
+        # 1- Por el elemento, es decir por la etiqueta a la cual se le quiera agregar un estilo particular
+
+        # 2- Por la clase, con el atributo 'class' dentro del tag, para referenciar dentro del archivo css la clase se escribe un punto(.) antes, ejemplo: '.clase1'
+
+        # 3- Por id, con el atributo id, a diferencia de class este lleva un # antes del nombre, ejemplo: '#id1'
+
+*/

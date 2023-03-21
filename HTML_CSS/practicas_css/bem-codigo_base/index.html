@@ -1,0 +1,88 @@
+<!-- file:///C:/Users/w9pab/Documents/MasterNotes/HTML_CSS/practicas_css/bem-codigo_base/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Metodología BEM</title>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+	<!-- En el ejemplo de abajo es sin BEM -->
+	<!-- <div class="contenedor">
+		<div class="card">
+			<a href="#" class="contenedor_imagen"><img src="" alt=""></a>
+			<div class="contedor_textos"></div>
+		</div>
+	</div> -->
+	<!-- Al querer acceder a darle estilo a la imagen se tendria que poner de la siguiente manera en css
+		.card .contenedor_imagen img {}
+		Si bien no esta mal,. esto no es escalable ya que cuando el proyecto es mas grande 
+		ocuparias acceder a mas clases ejemplo:
+		.card .contenedor .parrafo .imagen img{}
+		BEM nos ayuda a resolver el anidar clases
+	-->
+	<!-- BEM: Bloques, Elementos y Modificadores 
+		Bloques: Los componentes de nuestro sitio que queremos poder reutilizar en alguna otra parte de nuestra pagina. (Es el nombre solamente sin nada mas) ejemplo 'card'
+		Elementos: Es lo que esta dentro del Bloque, como la imagen,titulo,texto, y el boton. A cada elemento se le pone una clase. (se añade __) ejemplo 'card__titulo'
+		Modificadores: Modifican el bloque en diferentes estados. (Se añade --) ejemplo 'boton--absolute'
+	-->
+
+	<!-- Ejemplo con BEM -->
+	<div class="contenedor">
+		<div class="contenedor__cards">
+			<div class="card"> <!-- Bloque -->
+				<a href="#" class="card__thumbnail"> <!-- Se referencia al bloque con __  -->
+					<img class="card__img" src="./img/1.jpg"  alt="">
+				</a>
+				<div class="card__textos">
+					<h3 class="card__titulo">
+						<a href="#" class="card__enlace-titulo">Lorem Ipsum Dolor Sit Amet</a>
+					</h3>
+						<p class="card__extracto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	
+						<a href="#" class="boton boton--absolute"> <!-- Bloque 'boton', MODIFICADOR 'boton--absolute'-->
+							<span class="boton__texto">Ver Mas</span>
+							<i class="boton__icono fas fa-arrow-right"></i>
+						</a>
+				</div>
+			</div>
+
+			<div class="card"> <!-- Bloque -->
+				<a href="#" class="card__thumbnail"> <!-- Se referencia al bloque con __  -->
+					<img class="card__img" src="./img/2.jpg"  alt="">
+				</a>
+				<div class="card__textos">
+					<h3 class="card__titulo">
+						<a href="#" class="card__enlace-titulo">Lorem Ipsum Dolor Sit Amet</a>
+					</h3>
+						<p class="card__extracto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	
+						<a href="#" class="boton boton--absolute"> <!-- Bloque 'boton', MODIFICADOR 'boton--absolute'-->
+							<span class="boton__texto">Ver Mas</span>
+							<i class="boton__icono fas fa-arrow-right"></i>
+						</a>
+				</div>
+			</div>
+		</div>
+ 
+
+		<div class="frase"> <!-- Bloque -->
+			<h2 class="frase__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+			<a href="#" role="button" class="boton boton--verde"> 	<!-- el atributo role es importante para dispositivos que ocupen accesibilidad -->
+				<span class="boton__texto">Comprar</span>
+				<i class="fas fa-shopping-cart"></i>
+			</a> 
+		</div>
+	</div>  
+
+
+
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+</html>
