@@ -1,0 +1,35 @@
+<!-- file:///C:/Users/w9pab/Documents/MasterNotes/HTML_CSS/practicas_css/practicas_html/index5_especificidadyselectores.html -->
+<!-- Demo de especificidad y orden en selectores clase 28 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../practicas_css/style5.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1 id="page-title" class="title">Empresa</h1>
+        <nav>
+            <ul id="main-nav" class="nav">
+                <li><a href="">Home</a></li>
+                <li><a href="">Cursos</a></li>
+                <li><a href="">Instructores</a></li>
+                <li><a href=""style="background-color: orange;" class="blog">Blog</a></li> 
+                <!-- Nota es una mala practica poner estilos embebidos a un elemento como el de arriba, 
+                ya que en este ejemplo si le agregamos color mediante la clase blog, el style embebido tiene mayor especificidad por lo que la clase blog
+                no va a poder cambiar el background-color. -->
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
+
+<!-- Notas: No se puede tener mas de un id para el mismo elemento.
+    Cuando usamos el inspeccionar de google chrome en un elemento, nos va a regresar por orden de especificidad, del mas importante al menos.
+
+ -->
+<!-- asdf -->
