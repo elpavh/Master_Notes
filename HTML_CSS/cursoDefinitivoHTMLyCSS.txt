@@ -283,8 +283,118 @@
 
         # 3- Orden en las fuentes
             # Como mandas llamar los estilo por ejemplo diferentes archvios de CSS, o en que linea de codigo colocas el estilo.
-        
+
+
+# Combinadores: https://flukeout.github.io/ , https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators
+    # Nos permite combinar multiples selectores y crear una mayor especificidad  
+
+    # Adjacent sibling  (div + p{})
+        #
+
+    # General sibling (div ~p{})
+        #
+
+    # Child (div>p{})
+        # solo le herada a quien sea su hijo directo solo a los que realmente son sus hijos.
+    
+    # Descendant (div p{})
+        #
+
+
+# Medidas (Aboslutas vs Relativas)
+    # Absolutas:
+        # Cuando se habla de medidas aboslutas vamos a estar utilizando los Pixeles (px)
+
+    # Relativas:
+        # Son diferentes porque estas van a cambiar, como usar % esta varia dependiendo el tamaño de la pantalla.
+
+            # em: Es otra medida, em significa elemento.
+
+            # rem(root em): significa root elemento.
+
+            # max-width / max-height: Medida relativa porque varia con el tamano de la pantalla
+
+            # min-width / max-height : Medida relativa porque varia con el tamano de la pantalla
+
+            # vw(viewport width)
+
+            # vh(viewport height)
+
+
+# Position:
+
+    # Es la forma en la que podemos posicionar los contenedores, existen diferentes formas:
+
+        # static: este es el valor predeterminado y significa que el elemento se posicionará según 
+                   el flujo normal del documento. Es decir, se colocará en su posición normal en el flujo del HTML.
+
+        # absolute: este valor posiciona el elemento en relación con el primer elemento padre que tenga una posición diferente 
+                     a static. Si no hay un elemento padre con una posición diferente a static, entonces el elemento se posiciona
+                     en relación con la ventana del navegador. Las propiedades #top, #bottom, #left y #right se pueden usar para ajustar
+                     la posición del elemento.
+
+        # relative: con esta propiedad, el elemento se posiciona en relación con su posición original en el flujo del HTML. Se pueden usar
+                     propiedades como top, bottom, left y right para ajustar su posición a partir de su posición original.
+
+        # fixed: este valor posiciona el elemento en relación con la ventana del navegador, independientemente de la posición de desplazamiento. 
+                  Es decir, el elemento permanecerá fijo en su posición incluso si se desplaza la página. Las propiedades #top, #bottom, #left y #right
+                   se pueden usar para ajustar la posición del elemento.
+
+        # sticky: Se comporta como relative hasta que se alcanza un punto de desplazamiento específico, momento en el que se convierte en fixed y 
+                   permanece en su lugar. Es decir, el elemento se comportará como si estuviera posicionado de manera relative hasta que se desplace 
+                   por debajo de una posición específica en la pantalla, momento en el que se comportará como fixed. Las propiedades #top, #bottom, 
+                   #left y #right también se pueden usar con sticky para ajustar su posición a partir de su posición original.
+
+    # Es importante tener en cuenta que cuando se utiliza "absolute", "fixed" o "sticky", el elemento se saca del flujo normal del documento, lo que puede 
+       afectar la posición de otros elementos en la página. Por lo tanto, es importante utilizar estas propiedades con cuidado y considerar cómo afectarán 
+       al diseño global de la página.
 
 
 
-        
+# Malas practicas
+
+    # Utilizar tanto id en CSS
+
+    # Utilizar el !important
+
+    # Utilizar la etiqueta <style> dentro del archivo html
+    
+    # Utilizar el atributo style dentro de las etiquetas html
+    
+    # Utilizar div para contener todo ignorando los header, nav, section, article, etc.
+    
+    # No utilizar la etiqueta <form> para hacer formularios
+    
+    # Utilizar las etiquetas <select> y <option> para hacer selectores o menús desplegables.
+    
+    # No nombrar el primer archivo html del proyecto como index.html
+    
+    # No tener archivos .css para cada pantalla de un proyecto.
+    
+    # Tener todo el css junto en un solo archivo.
+    
+    #No ponerle el atributo alt a una imagen
+    
+    # Poner imágenes dentro de <div> en vez de <figure>
+    
+    #Utilizar textos solo en mayúscula en HTML, en vez de utilizar el atributo de CSS, text-transform, con el valor uppercase. Ya que al hacer esto pareciera que estuvieras gritando.
+    
+    # Poner videos que se reproduzcan solos.
+    
+    # No optimizar las imágenes.
+    
+    # No tener cuidado de cual es el formato ideal para las imágenes y su respectivo peso.
+    
+    # No tener cuidado con la respectiva semántica de HTML, y con la sintaxis adecuada para CSS.
+    
+    # No cerrar las etiquetas que se cierran en sí mismas como <br/>
+    
+    # No comentar partes esenciales de tu código.
+    
+    # No poner la etiqueta <meta name=”robots” content=”index,follow”> en tu proyecto para que los navegadores los puedan ubicar mejor.
+    
+    # No usar la etiqueta <meta name=”viewpor” content=”width=device-width, initial-scale=1.0”> para hacer tu proyecto responsive.
+    
+    # No poner el atributo autocomplete=”valor” en los campos de tu formulario para hacerle la vida más fácil al usuario
+    
+    # No usar el atributo required en los campos obligatorios de tu formulario como una primera capa de seguridad

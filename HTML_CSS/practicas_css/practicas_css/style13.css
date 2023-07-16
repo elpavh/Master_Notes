@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: purple;
+}
+/* El main como contenedor esta utilizando el 100% del viewport-width y viewport-height , por lo cual se ve toda la pantalla.
+    Las propiedades  viewport-width y viewport-height nos permiten definir el ancho y el alto de un elemento usando el viewport
+     del dispositivo en el que se renderice el elemento.
+*/
+
+section{
+    width: 80%;
+    min-width: 320px;
+    max-width: 500px;
+    min-height: 500px;
+    background-color: red;
+    margin: 0 auto;
+}
+/* Para centrar el section le podemos agregar un margin: 0 auto; 
+el "0 auto" quiere decir de arriba abajo no le agreges ningun margin, pero izquierda a derecha haz que el margin
+se logre ajustar de forma automatica.
+
+Una regla importante es cuando vayamos a utilizar el min/max en width necesitamos tener un width BASE, y casi siempre este va hacer
+en porcentaje (*) 
+
+con el min-width ponemos un tamano minimo si no es mas de 320 no va a plciar el width del 80%
+
+con el max-width limitamos el crecimiento en este caso a 500px, fuera de ahi ya no va aplicar el 80% de proporcion de la pantalla.
+
+*/
+
+/* “If you for some reason use both the width property and the max-width property on the same element, and the value of the width property is larger
+ than the max-width property; the max-width property will be used (and the width property will be ignored).”
+https://www.w3schools.com/css/css_dimension.asp */

@@ -1,0 +1,7 @@
+h2 + p {
+    color: red;
+}/* Colocar el color en rojo  de todas las etiquetas p,   que sean cercanas a una etiqueta h2  */
+
+h2 + h3 {
+    color: green; 
+}

@@ -1,0 +1,8 @@
+div > p {
+    color: red;
+} /* Combinador Child, esto se lee: el padre (div) que sea mayor (>) que una etiqueta parrafo (p) */
+
+
+div article{
+    color: blue;
+} /* Combinador Descendant, esto se lee: todas etiquetas article que esten dentro del tag div se aplica estos estilos */

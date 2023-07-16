@@ -1,0 +1,16 @@
+main{
+    background-color: red;
+    width: 100%;
+    height: 500px;
+} /* El width en 100% significa que va a cubrir toda el anchode la pantalla con el estilo backgroundcolor red, a diferencia del height que solo
+      va a cubrir 500 px fijos en vertical. 
+    Nota: Cuando por ejemplo le pusieramos un width de 500px, y la pantalla es chica por ejemplo un celular se va a generar un overflow, el cual es mala practica
+    y va a parecer un scroll para moverte en horizontal por el tamano de la pantalla.
+      */
+p{
+    font-size: 18px;
+} 
+h2{
+    font-size: 50%;
+}/* Al aplicar el 50%, el tamano que se utilizara en este ejemplo sera el heredado del navegador (16px) por lo que el 50% seria 8PX */
+

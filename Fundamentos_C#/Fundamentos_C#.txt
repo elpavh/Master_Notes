@@ -1,0 +1,15 @@
+
+# El ambiente en C# es en windows, por lo que los comandos son en powershell.
+
+## Commands                                 ## Descripcion
+
+$ cat .\w9pab.csproj                        # Nos dice las propiedades del grupo como su version de .NET
+
+$ dotnet new                                # Nos muestra una introduccion a la version de .Net instalada, y nos dicen los templates mas comunes.
+
+$ dotnet new console --output sample1       # Con este comando podemos crear una aplicacion del template'Console App', con --output podemos especificar la carpeta en la que 
+                                                genere la aplicacion
+
+$ dotnet run --project sample1              # se utiliza para ejecutar la aplicacion, con '--project sample' espeficamos cual proyecto de la carpeta ejecute.
+
+# dotnet build                              # Con este compilamos, con lo cual genera un ejecutable (crea una carpeta bin)

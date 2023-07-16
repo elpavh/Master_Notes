@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+p{
+    font-size: 1.6rem;
+}
+main div{
+    font-size: 1.6rem;
+}
+/* REM siempre va a tener referencia al estilo que tenga la etiqueta root, o el root de nuestro proyectok. En este caso siempre va hacer nuestro HTML. */
+/* Se agrega el font-size de 62.5% que es equivale a 10, asi cuando se utilize rem, podemos poner por ejemplo para 16 px, 1.6 rem. */

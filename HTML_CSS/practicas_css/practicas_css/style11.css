@@ -1,0 +1,12 @@
+body{
+    font-size: 20px;
+}
+.text-container {
+    font-size: 1.5em;
+}
+.text-container div{
+    font-size: 1.5em;
+
+}
+
+/* EM es un acronimo de elemento, y lo que hace es que va a tomar el tamano de fuente que tenga el PADRE directo */
