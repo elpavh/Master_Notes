@@ -1,4 +1,14 @@
 
+## Dotnet:    
+            Es una herramienta para administrar código fuente .NET. De cierta manera es un un marco de trabajo que brinda una arquitectura básica para realizar programas 
+             utilizando en su principio tecnologías de Microsoft en entornos de Microsoft, con muchas facilidades para los desarrolladores.           
+
+# Lenguaje Multiparadigma
+
+    # Strong typing  # Imperative # Declarative
+    # Functional # Generic # Object/oriented(class-based)
+    # Component oriented
+
 # El ambiente en C# es en windows, por lo que los comandos son en powershell.
 
 ## Commands                                 ## Descripcion
@@ -12,4 +22,12 @@ $ dotnet new console --output sample1       # Con este comando podemos crear una
 
 $ dotnet run --project sample1              # se utiliza para ejecutar la aplicacion, con '--project sample' espeficamos cual proyecto de la carpeta ejecute.
 
-# dotnet build                              # Con este compilamos, con lo cual genera un ejecutable (crea una carpeta bin)
+$ dotnet build                              # Con este compilamos, con lo cual genera un ejecutable (crea una carpeta bin)
+
+$ dotnet build -c Release -r win10-x64     # Comando '-c Realese' nos dice que si va a generar codigo de produccion o de depuracion, '-r win10-x64' el sistema operativo objetivo
+
+
+## Notas:
+
+# En la carpeta bin se genera el ejecutable.
+
